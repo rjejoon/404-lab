@@ -1,0 +1,12 @@
+1. To specify a TCP socket in Python, you pass in socket.SOCK_STREAM constant to the type parameter of
+   socket.socket().
+
+2. In Python, a server socket binds to the server host and port and then listens to and accepts
+   incoming requests. It is the client socket that first initializes a three-way handshake
+   to establish a TCP connection between the client and the server.
+
+3. socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+4. From an incoming connection, we get its IP address and corresponding port number.
+
+5. recv() returns an utf-8 encoded byte string attached to the HTTP request.
