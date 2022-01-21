@@ -20,7 +20,7 @@ def main():
         while True:
             data = s.recv(buffer_size)
             if not data:
-                 break
+                break
             full_data += data
         print(full_data)
 
@@ -45,9 +45,8 @@ def send_payload(s, payload):
     try:
         s.sendall(payload.encode())
     except socket.error:
-        print("Error: sending payload failed")
+        print("Error: sending payload failed", file=sys.stderr)
         sys.exit()
-
 
 
 if __name__ == "__main__":

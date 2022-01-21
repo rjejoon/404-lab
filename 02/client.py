@@ -26,7 +26,7 @@ def get_remote_ip(host):
 
 #send data to server
 def send_data(serversocket, payload):
-    print("Sending payload")    
+    print("Sending payload")
     try:
         serversocket.sendall(payload.encode())
     except socket.error:
@@ -49,7 +49,7 @@ def main():
 
         s.connect((remote_ip , port))
         print (f'Socket Connected to {host} on ip {remote_ip}')
-        
+
         #send the data and shutdown
         send_data(s, payload)
         s.shutdown(socket.SHUT_WR)
@@ -67,6 +67,6 @@ def main():
     finally:
         #always close at the end!
         s.close()
+
 if __name__ == "__main__":
     main()
-
