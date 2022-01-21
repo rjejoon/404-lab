@@ -7,6 +7,7 @@ def main():
         proxy_server_host = "127.0.0.1"      # localhost
         proxy_port = 8001
         dest_host = "www.google.com"
+        # send GET request to www.google.com
         payload = f'GET / HTTP/1.0\r\nHost: {dest_host}\r\n\r\n'
         buffer_size = 4096
 
