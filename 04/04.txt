@@ -1,0 +1,6 @@
+1. github repo link
+2. A "Contratulations!" page with a rocket taking off.
+3. /: 404 error page
+   /polls/: A page with "Hello, world. You're at the polls index."
+4. Django migration is a way of applying changes made to the models into the database schema.
+   We need it to synchronize the database.
