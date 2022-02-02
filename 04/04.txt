@@ -4,3 +4,6 @@
    /polls/: A page with "Hello, world. You're at the polls index."
 4. Django migration is a way of applying changes made to the models into the database schema.
    We need it to synchronize the database.
+5. After loggin into the Django admin site, there is a Django admin page with 4 modifiable models: Groups, Users, Choices, and Questions.
+   Register custom models by admin.site.register(model) in admin.py.
+6.
