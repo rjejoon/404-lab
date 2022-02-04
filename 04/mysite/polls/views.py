@@ -5,6 +5,11 @@ from django.views import generic
 
 from .models import Choice, Question
 
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+from .serializers import QuestionSerializer
+
+
 class IndexView(generic.ListView):
   template_name = 'polls/index.html'
   context_object_name = 'latest_question_list'
@@ -41,5 +46,30 @@ def vote(request, question_id):
     # user hits the Back button.
     return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
     
+
+@api_view(['GET'])
+def get_questions(request):
+  '''
+  Get the list of questions on our website
+  '''
+  questions = Question.objects.all()
+  serializer = QuestionSerializer(questions, many=True)
+  return Response(serializer.data)
+
+
+@api_view(['POST'])
+def update_question(request, pk):
+  '''
+  Get the list of questions on our webiste
+  '''
+  question = Question.objects.get(id=pk)
+  serializer = QuestionSerializer(question, data=request.data, partial=True)
+  if serializer.is_valid():
+    serializer.save()
+    return Response(serializer.data)
+  return Response(status=400, data=serializer.errors)
+
+
+
 
 
