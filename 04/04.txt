@@ -1,4 +1,4 @@
-1. github repo link
+1. https://github.com/rjejoon/404-lab/tree/main/04
 2. A "Contratulations!" page with a rocket taking off.
 3. /: 404 error page
    /polls/: A page with "Hello, world. You're at the polls index."
@@ -13,5 +13,6 @@
    Use str instead of int for the converters.
 7. It is a bad idea to hardcode urls into the templates because it becomes challenging to change urls on projects with a lot of templates.
    If you change a url, you have to modify the templates that use that url.
-
-
+8. By using Django's generic views, you don't have to write as much code as opposed to when you write the views "the hard way".
+   Use the generic views for common patterns used in Web development as they abstract the common patterns.
+   Don't use the generic views if you are trying to implement more complex views.
