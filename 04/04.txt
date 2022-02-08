@@ -1,0 +1,18 @@
+1. https://github.com/rjejoon/404-lab/tree/main/04
+2. A "Congratulations!" page with a rocket taking off.
+3. /: 404 error page
+   /polls/: A page with "Hello, world. You're at the polls index."
+4. Django migration is a way of applying changes made to the models into the database schema.
+   We need it to synchronize the database.
+5. After logging into the Django admin site, there is a Django admin page with 4 modifiable models: Groups, Users, Choices, and Questions.
+   Register custom models by admin.site.register(model) in admin.py.
+6. /polls/38/: a page with "You're looking at question 38"
+   /polls/38/results: a page with "You're looking at the results of question 38"
+   /polls/38/vote: a page with "You're voting on question 38"
+   404 error if you don't put a number.
+   Use str instead of int for the converters.
+7. It is a bad idea to hardcode urls into the templates because it becomes challenging to change urls on projects with a lot of templates.
+   If you change a url, you have to modify the templates that use that url.
+8. By using Django's generic views, you don't have to write as much code as opposed to when you write the views "the hard way".
+   Use the generic views for common patterns used in Web development as they abstract the common patterns.
+   Don't use the generic views if you are trying to implement more complex views.
